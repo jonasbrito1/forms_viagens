@@ -1,0 +1,182 @@
+/* Reseta algumas propriedades padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos globais */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #002D43, #1630b1, #F48120);
+    color: #ffffff;
+    text-align: justify;
+}
+
+header {
+    background-color: #1630b1;
+    color: #FFFFFF;
+    padding: 10px 0;
+    margin: 0;
+    width: 100vw;
+    position: relative;
+    left: 0;
+    box-sizing: border-box; /* Inclui padding e border dentro da largura */
+}
+
+/* Centralizar logo e título no cabeçalho */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px; /* Limita a largura do cabeçalho */
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 20px;
+    position: absolute;
+    left: 0; /* Alinha a logo à esquerda */
+    transform: translateX(20px); /* Move a logo 10px para a direita */
+}
+
+/* Estilizando o título do cabeçalho */
+header h1 {
+    font-size: 2.5rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Estilizando o formulário */
+form {
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo semitransparente */
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #002D43; /* Cor do texto dos labels */
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #002D43;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus {
+    border-color: #F48120;
+    outline: none;
+    box-shadow: 0 0 5px rgba(244, 129, 32, 0.5);
+}
+
+button[type="submit"] {
+    background-color: #F48120; /* Cor do botão */
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #002D43;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1630b1;
+    color: #FFFFFF;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilo do container para o checkbox e o botão */
+.termos-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Alinha o checkbox e o botão Enviar */
+    margin-bottom: 20px;
+}
+
+.termos-container label {
+    display: flex;
+    align-items: center; /* Alinha checkbox e texto verticalmente */
+    font-size: 0.9rem;
+    color: #002D43;
+}
+
+.termos-container input[type="checkbox"] {
+    margin-right: 10px; /* Espaço entre checkbox e texto */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"] {
+        font-size: 1rem;
+    }
+
+    button[type="submit"] {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .termos-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    button[type="submit"] {
+        align-self: flex-end;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"] {
+        font-size: 0.9rem;
+    }
+}
